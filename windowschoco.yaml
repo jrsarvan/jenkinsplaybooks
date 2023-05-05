@@ -1,0 +1,10 @@
+---
+-  hosts: all
+   tasks:
+   -  name: install packages using choco
+      win_chocolatey:
+        name:  '{{  item  }}'
+        state: present
+      loop:
+        - git
+        - firefox
