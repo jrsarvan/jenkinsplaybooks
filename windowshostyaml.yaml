@@ -1,0 +1,17 @@
+---
+all:
+  children:
+    DC_GROUP:
+      children:
+        DC01:
+          hosts:
+            DC-01:
+              ansible_host: 172.31.32.164
+
+      vars:
+        ansible_connection: winrm
+        ansible_winrm_server_cert_validation: ignore
+        ansible_winrm_transport: basic
+        ansible_port: 5986
+        ansible_user: localadmin
+        ansible_password: LG@Samsung2013
